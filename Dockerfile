@@ -1,7 +1,4 @@
-FROM python:3.8-slim
-
-COPY add.py /app/add.py
-
-WORKDIR . /app
-
-CMD ["python", "add.py"]
+FROM python:3.9-alpine3.15
+WORKDIR /app
+COPY add.py     .
+CMD ["python","add.py"]
